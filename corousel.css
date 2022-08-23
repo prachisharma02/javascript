@@ -1,0 +1,152 @@
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            height: 10px;
+            width: 100%;
+            background-color: white;
+        }
+
+        .corousel{
+            width: 100%;
+            height: 800px;
+            /* background-color: red; */
+            position: relative;
+            overflow: hidden;
+        }
+        .button {
+            width: 100%;
+            height: 70px;
+            /* background-color: black; */
+            position: absolute;
+            top: 280px;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 30px;
+            padding-right: 30px;
+
+        }
+
+        .move{
+            width: 70px;
+            height: 70px;
+            background-color: rgba(0,0,0,.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+        }
+
+        .slider{
+            height: 550px;
+            /* background-color: green; */
+            width: 600%;
+            display: flex;
+            margin-left: -100%;
+            
+        }
+
+        .sliderchild {
+            height: 550px;
+            width: 1260px;
+            /* background-color: yellow; */
+           
+           
+            overflow: hidden;
+        }
+
+        .sliderchild>img 
+        {
+            width: 100%;
+        }
+
+        .indicators{
+            width: 100%;
+            height: 12px;
+            /* background-color: red; */
+            position: absolute;
+            bottom: 40%;
+            display: flex;
+            justify-content: center;
+            column-gap: 10px;
+        }
+
+        p {
+            width: 12px;
+            height: 12px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        
+       
+
+       
+
+/*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.header
+{
+    width: 100%;
+    height: 50px;
+    background-color: bisque;
+}
+.corousel
+{
+    height: 850px;
+    width:100%;
+    background-color: rgb(216, 140, 48);
+    position: relative;
+}
+.button
+{
+    width: 100%;
+    height: 40px;
+    
+    position: absolute;
+    top: 280px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+   
+}
+.move
+{
+    width: 40px; 
+    height: 40px;
+    background-color: rgb(0, 0, 0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: beige;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider
+{
+  height: 800px;
+  width: 280%;
+  background-color: rgb(113, 175, 228);
+  display: flex;
+  margin-left: -100%;
+}
+.sliderchild
+{
+    height: 550px;
+    width: 1260px;
+   background-color: blueviolet;
+}
