@@ -1,0 +1,20 @@
+#div2 {
+  height: 300px;
+  width: 300px;
+  background-color: azure;
+  border: 0.5px solid grey;
+  border-radius: 5px;
+  text-align: center;
+  margin: 40px auto;
+  box-shadow: 10px 10px lightblue;
+}
+#div3 {
+  height: 300px;
+  width: 300px;
+  background-color: rgb(116, 222, 174);
+  border: 0.5px solid grey;
+  border-radius: 7px;
+  text-align: center;
+  margin: 40px auto;
+  box-shadow: 10px 10px rgb(197, 231, 219);
+}
