@@ -38,9 +38,9 @@ $(document).ready(function () {
 //   $("#img1").css("height", "300px");
 //   $("#img1").css("width", "500px");
 // });
-// but this require two different function as well as two different operations
+// but this require two different function as well as two different events
 
-// we can do this by just one function of jquery
+// we can do this by just one event of jquery
 
 $("img").hover(
   function () {

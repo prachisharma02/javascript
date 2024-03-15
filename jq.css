@@ -18,6 +18,9 @@
   margin: 40px auto;
   box-shadow: 10px 10px rgb(197, 231, 219);
 }
+#div4 {
+  margin: auto;
+}
 button {
   height: 50px;
   width: 180px;
