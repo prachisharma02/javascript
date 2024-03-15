@@ -18,3 +18,12 @@
   margin: 40px auto;
   box-shadow: 10px 10px rgb(197, 231, 219);
 }
+button {
+  height: 50px;
+  width: 180px;
+  background-color: rgb(212, 152, 152);
+  border: 0.5px solid grey;
+
+  border-radius: 7px;
+  margin: 10px;
+}
