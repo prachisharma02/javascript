@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style>
+      body {
+        height: 300px;
+        width: 500px;
+        margin: 100px auto;
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="colorname"> Enter Text </label>
+    <input type="text" id="text" />
+    <button onclick="change()">Submit</button>
+    <button onclick="reverse()">reverse</button>
+    <button onclick="capitalize()">capital</button>
+
+    <div id="color" style="height: 130px; width: 180px"></div>
+    <script>
+      function change() {
+        var color = document.getElementById("text").value;
+        document.getElementById("color").style.backgroundColor = color;
+      }
+      function reverse() {
+        var text = document.getElementById("text").value;
+        var rev = text.split("");
+        var str;
+        for (let i = 0; i < rev.length / 2; i++) {
+          let temp = rev[i];
+          rev[i] = rev[rev.length - 1 - i];
+          rev[rev.length - 1 - i] = temp;
+        }
+        rev = rev.join(""); // back to string
+        document.getElementById("color").innerHTML = rev;
+      }
+
+      function capitalize() {
+        var text = document.getElementById("text").value;
+        var words = text.split(" ");
+        for (var i = 0; i < words.length; i++) {
+          words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+        }
+        words = words.join(" "); // Combine capitalized words and return
+        document.getElementById("color").innerHTML = words;
+      }
+      function capital() {
+        var text = document.getElementById("text").value;
+      }
+    </script>
+  </body>
+</html>

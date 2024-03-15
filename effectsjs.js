@@ -18,4 +18,24 @@ $(document).ready(function () {
   $("#btn6").click(function () {
     $("img").fadeToggle(2500);
   });
+
+  $("#btn7").click(function () {
+    $("img").slideUp(4000);
+  });
+
+  $("#btn8").click(function () {
+    $("img").slideDown();
+  });
+
+  $("#btn9").click(function () {
+    $("img").slideToggle();
+  });
+
+  $("#btn10").click(function () {
+    $("img").stop();
+  });
+
+  $("#btn11").click(function () {
+    $("img").animate({ right: "350px", height: "500px" }, 1000); // left will only work when image position is absolute
+  });
 });

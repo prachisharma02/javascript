@@ -1,0 +1,82 @@
+* {
+  font-size: medium;
+}
+.cover {
+  padding: 100px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://wallpapers.com/images/high/work-background-ahs67leyrp8wsogy.webp");
+}
+.small {
+  margin: 0 auto;
+  height: 290px;
+  width: 400px;
+  padding: 50px;
+  text-align: center;
+  background-color: rgb(212, 214, 216);
+  opacity: 0.8;
+  color: black;
+}
+
+.search {
+  margin-top: 20px;
+}
+.tabs {
+  margin-left: 350px;
+}
+.betweentabs {
+  width: 200px;
+  text-align: center;
+}
+.inside {
+  background-color: blueviolet;
+}
+.desc {
+  margin-left: 350px;
+  display: flex;
+}
+.contain {
+  margin-top: 20px;
+  margin-left: 350px;
+}
+.ask {
+  background-color: rgb(238, 232, 232);
+  height: fit-content;
+  width: 100%;
+  font-size: small;
+}
+.movement {
+  margin: 20px 100px;
+  display: flex;
+}
+.round {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+.footer {
+  background-color: rgb(103, 100, 100);
+  height: fit-content;
+  width: 100%;
+  font-size: small;
+}
+.infooter {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  opacity: 0.8;
+}
+.foot {
+  background-color: rgb(65, 63, 63);
+  height: 100px;
+  text-align: center;
+  padding: 40px;
+  color: aliceblue;
+}
+.foots {
+  background-color: gainsboro;
+  height: 100px;
+  text-align: center;
+  padding: 40px;
+}
