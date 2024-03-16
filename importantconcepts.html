@@ -7,11 +7,11 @@
   </head>
   <body>
     <p>this is first para</p>
-    <p>this is first para</p>
+    <p>this is second para</p>
     <p class="odd">this is odd para</p>
-    <p id="even">this is first para</p>
-    <p>this is first para</p>
-    <li>this is first para</li>
+    <p id="even">this iseven para</p>
+    <p>this is last para</p>
+    <li>this is list tag</li>
     <h1>this is first heading</h1>
     <img src="./Screenshot (171).png" />
     <script src="./jquery-3.7.1.js"></script>
@@ -23,10 +23,26 @@
       //     $("*").slideUp();
       //   });
       $("p").click(function () {
-        $("p.odd").hide(); // hides the p whose class name is odd
+        $("p.odd").hide(2000, function () {
+          console.log("hidden");
+        }); // hides the p whose class name is odd
       });
       $("p").click(function () {
         $("p#even").hide(); // hides the p whose id is even
+      });
+
+      $("img").on("click", function () {
+        console.log("thanks for clicking ", this); // another way of click
+      });
+
+      //now you can use multiple events together
+      $("img").on({
+        click: function () {
+          console.log("thanks for clicking ", this);
+        },
+        mouseleave: function () {
+          console.log("thanks for leaving ", this);
+        },
       });
     </script>
   </body>

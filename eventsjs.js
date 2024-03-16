@@ -29,15 +29,15 @@ $(document).ready(function () {
   });
 });
 
-// $("img").mouseenter(function () {
-//   $("#img1").css("height", "500px");
-//   $("#img1").css("width", "600px");
-// });
+$("img").mouseenter(function () {
+  $("#img1").css("height", "500px");
+  $("#img1").css("width", "600px");
+});
 
-// $("img").mouseleave(function () {
-//   $("#img1").css("height", "300px");
-//   $("#img1").css("width", "500px");
-// });
+$("img").mouseleave(function () {
+  $("#img1").css("height", "300px");
+  $("#img1").css("width", "500px");
+});
 // but this require two different function as well as two different events
 
 // we can do this by just one event of jquery
@@ -52,3 +52,9 @@ $("img").hover(
     $("#img1").css("width", "500px");
   }
 );
+
+/* there are more other events in jquery
+mouse events = click,dblclick,mouseenter,mouseleave
+keyboardevents =keypress, keydown ,MediaKeyStatusMap
+form events =submit, change, focus, blur
+document / window events = load,resize,scroll,unload*/
