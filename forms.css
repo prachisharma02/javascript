@@ -3,6 +3,19 @@ th,
 td {
   border: 1px solid;
 }
-#div1 {
-  margin: auto;
+.div1 {
+  margin: 30px auto;
+  padding: 30px;
+  height: fit-content;
+  width: 500px;
+  background-color: rgb(224, 192, 168);
+  border-radius: 10px;
+}
+#btn1 {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(154, 90, 35);
+  color: wheat;
+  border: none;
 }
