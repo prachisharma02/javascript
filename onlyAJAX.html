@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p id="data"></p>
+    <button id="btn">Get Data</button>
+    <script>
+      $("#btn").click(function () {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.github.com/users/hadley/orgs", true);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              var data = JSON.parse(xhr.responseText);
+              document.getElementById("data").textContent =
+                JSON.stringify(data);
+            } else {
+              console.error("Error: " + xhr.status);
+            }
+          }
+        };
+        xhr.send();
+      });
+    </script>
+  </body>
+</html>

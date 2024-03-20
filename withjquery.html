@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="data"></p>
+    <button>get data</button>
+    <button>save</button>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // jquery with get method is a simplified version you can only get value
+      // $("button").click(function () {
+      //   $.get(
+      //     "https://api.github.com/users/hadley/orgs",
+      //     function (data, status) {
+      //       $("#data").text(JSON.stringify(data)); // hm direct data get nhi krva sakte hme usko json se string me convert krna padega
+      //     }
+      //   );
+      // });
+
+      // jquery ajax method helps with multiple parameters we can also do get post put update delete
+      $("button").click(function () {
+        $.ajax({
+          url: "https://api.github.com/users/hadley/orgs",
+          success: function (data, status) {
+            $("#data").text(JSON.stringify(data)); // hm direct data get nhi krva sakte hme usko json se string me convert krna padega
+          },
+        });
+      });
+
+      //post method on this url is not allowed so just to give example
+      // $("button").click(function () {
+      //   $.post(
+      //     "https://code.jquery.com/jquery-3.7.1.js",
+      //     { name: "prachi" },
+      //     function (data, status) {
+      //       alert(status);
+      //     }
+      //   );
+      // });
+    </script>
+  </body>
+</html>

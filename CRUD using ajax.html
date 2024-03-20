@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="forms.css" />
+    <title>AjaxCRUD</title>
+  </head>
+  <body>
+      <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    
+      <form action="">
+        <div class="div1">
+        <label>give url</label>
+        <input type="url" >
+        <br />
+        <br>
+        <button>get data</button>
+        <textarea id="data" style="height: fit-content;"></textarea>
+
+       
+      </form>
+      
+    </div>
+    <script type="text/javascript" src="jquery-3.7.1.js"></script>
+<script>
+    $("button").click(function () {
+        $.ajax({
+          url: "https://dummy.restapiexample.com/api/v1/employees",
+          success: function (data, status) {
+            $("#data").text(JSON.stringify(data.status)); // hm direct data get nhi krva sakte hme usko json se string me convert krna padega
+          },
+        });
+      });
+</script>
+  </body>
+</html>
