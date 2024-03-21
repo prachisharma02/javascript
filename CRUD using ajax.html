@@ -1,39 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="forms.css" />
-    <title>AjaxCRUD</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POST Data using jQuery AJAX</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
   <body>
-      <script
-      src="https://code.jquery.com/jquery-3.7.1.js"
-      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-      crossorigin="anonymous"
-    ></script>
-    
-      <form action="">
-        <div class="div1">
-        <label>give url</label>
-        <input type="url" >
-        <br />
-        <br>
-        <button>get data</button>
-        <textarea id="data" style="height: fit-content;"></textarea>
+    <form id="myForm">
+      <textarea
+        style="height: 300px; width: 400px"
+        id="postData"
+        name="postData"
+      ></textarea>
+      <button type="button" id="first">Post</button>
+      <button type="button" id="second">Get</button>
+      <button type="button" id="third">Get individual data</button>
+      <button type="button" id="fourth">Update</button>
+      <button type="button" id="fifth">delete</button>
+    </form>
 
-       
-      </form>
-      
-    </div>
-    <script type="text/javascript" src="jquery-3.7.1.js"></script>
-<script>
-    $("button").click(function () {
-        $.ajax({
-          url: "https://dummy.restapiexample.com/api/v1/employees",
-          success: function (data, status) {
-            $("#data").text(JSON.stringify(data.status)); // hm direct data get nhi krva sakte hme usko json se string me convert krna padega
-          },
+    <script>
+      $(document).ready(function () {
+        $("#first").click(function () {
+          // Make the AJAX POST request
+          $.ajax({
+            url: "https://dummy.restapiexample.com/api/v1/create",
+            type: "POST",
+            dataType: "json",
+            success: function (response) {
+              // Display the response in the textarea
+              $("#postData").val(JSON.stringify(response));
+            },
+            error: function (xhr, status, error) {
+              console.error("Error:", error);
+            },
+          });
+        });
+
+        $("#second").click(function () {
+          $.ajax({
+            url: "https://dummy.restapiexample.com/api/v1/employees",
+            type: "GET",
+            dataType: "json",
+            success: function (response) {
+              $("#postData").val(JSON.stringify(response));
+            },
+            error: function (xhr, status, error) {
+              console.error("Error:", error);
+            },
+          });
+        });
+        $("#third").click(function () {
+          $.ajax({
+            url: "https://dummy.restapiexample.com/api/v1/employee/1",
+            type: "GET",
+            dataType: "json",
+            success: function (response) {
+              $("#postData").val(JSON.stringify(response));
+            },
+            error: function (xhr, status, error) {
+              console.error("Error:", error);
+            },
+          });
+        });
+        $("#fourth").click(function () {
+          var dataToUpdate = {
+            name: "test",
+            salary: "123",
+            age: "23",
+            id: 25,
+          };
+          $.ajax({
+            url: "https://dummy.restapiexample.com/api/v1/update/21",
+            type: "PUT",
+            data: JSON.stringify(dataToUpdate),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+              $("#postData").val(JSON.stringify(response));
+            },
+            error: function (xhr, status, error) {
+              console.error("Error:", error);
+            },
+          });
+        });
+        $("#fifth").click(function () {
+          $.ajax({
+            url: "https://dummy.restapiexample.com/api/v1/delete/2",
+            type: "DELETE",
+
+            dataType: "json",
+            success: function (response) {
+              $("#postData").val(JSON.stringify(response));
+            },
+            error: function (xhr, status, error) {
+              console.error("Error:", error);
+            },
+          });
         });
       });
-</script>
+    </script>
   </body>
 </html>
