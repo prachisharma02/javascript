@@ -23,13 +23,11 @@
     <script>
       $(document).ready(function () {
         $("#first").click(function () {
-          // Make the AJAX POST request
           $.ajax({
             url: "https://dummy.restapiexample.com/api/v1/create",
             type: "POST",
             dataType: "json",
             success: function (response) {
-              // Display the response in the textarea
               $("#postData").val(JSON.stringify(response));
             },
             error: function (xhr, status, error) {

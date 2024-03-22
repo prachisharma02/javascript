@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>table,thead,tbody,th,td{
+        border: 1px solid black;
+    }</style>
+    <table>
+        <thead>
+        <th>name</th>
+        <th>id</th>
+        <th>sal</th>
+        </thead>
+ 
+        <td> <table>
+        <thead>
+        <th>name</th>
+        <th>id</th>
+        <th>sal</th>
+       
+ 
+        <td>prachi</th>
+        <td>1</td>
+        <td>1000</td>
+     
+    </table></th>
+        <td>1</td>
+        <td>1000</td>
+     
+    </table>
+
+    <a href="https://gemini.google.com/chat" target="_top">click</a>
+    <span style="background-color: lightblue;">Inline Element</span>
+    <div style="background-color: lightgreen;">Block Element</div>
+<div style="display: inline-block; width: 100px; height: 100px; background-color: lightcoral;"></div>fyg
+
+<div style="display: flex; background-color: lightskyblue;">
+  <div style="flex: 1; background-color: lightpink;">Flex Item 1</div>
+  <div style="flex: 1; background-color: lightyellow;">Flex Item 2</div>
+</div>
+<span style="display: inline-flex; background-color: lightgoldenrodyellow;">
+  Inline Flex Container
+  <div style="background-color: lightgray;">Flex Item 1</div>
+  <div style="background-color: lightgray;">Flex Item 2</div>
+</span>
+<div style="display: grid; grid-template-columns: 100px 100px; background-color: lightseagreen;">
+  <div style="background-color: lightcoral;">Grid Item 1</div>
+  <div style="background-color: lightsalmon;">Grid Item 2</div>
+  <div style="background-color: lightpink;">Grid Item 3</div>
+  <div style="background-color: lightyellow;">Grid Item 4</div>
+</div>
+<div id="hideMe" style="background-color: lightgray;">Hidden Element</div>
+<button onclick="hideElement()">Hide Element</button>
+
+<script>
+  function hideElement() {
+    document.getElementById("hideMe").style.display = "none";
+  }
+</script>
+<label for="">select </label>
+<select>
+<option value="one">One</option>
+<option>two</option>
+</select>
+ <label for="name">Name:</label>
+                    <input type="text" id="name" list="nameOptions" required>
+                    <datalist id="nameOptions">
+                        <option value="John">
+                        <option value="Jane">
+                        <option value="Alice">
+                        <option value="Bob">
+                    </datalist>
+<img  src=”image_url” ,  usemap=”#workspace” />
+<map  name=”workspace”>
+     <area shape=”rect”  coords=”34, 44, 270, 350” ,  href=”xyz.html” />
+     <area shape=”rect”  coords=”10, 120, 250, 360” ,  href=”xyz.html” />
+</map>
+
+<h2>Meter</h2>
+            <label for="fileMeter">File Upload Progress:</label>
+            <meter id="fileMeter" value="20" min="0" max="100">0%</meter>
+            <br><br>
+<h2>Progress</h2>
+            <label for="taskProgress">Task Progress:</label>
+            <progress id="taskProgress" value="80" max="100">0%</progress>
+
+              <svg width="200" height="200">
+            <rect x="50" y="50" width="100" height="100" fill="green" />
+        </svg>
+
+<canvas id="myCanvas" width="200" height="200"></canvas>
+ <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 100, 100);
+    </script>
+
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="border: 1px solid #aaaaaa; width:350px; height: 70px;"></div>
+   <br>
+   <img id="drag1" src="./Screenshot (171).png" draggable="true" width="336" height="69">
+  </body>
+</html>
